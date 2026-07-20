@@ -20,6 +20,7 @@ Hybrid Quadruped Robot Platform for Disaster Response and Autonomous Robotics
 
 ---
 
+
 # Overview
 
 BÖRÜTAY is a modular hybrid quadruped robotic platform developed by the **BÖRÜTAY Team** at **OSTİM Technical University**. The project aims to provide a scalable robotic system for disaster response, autonomous robotics research and embedded systems development.
@@ -27,6 +28,7 @@ BÖRÜTAY is a modular hybrid quadruped robotic platform developed by the **BÖR
 The current platform features a **2-DOF quadruped architecture**, while the next-generation version is being expanded with **3-DOF legs, wheel modules, robotic arm integration, RFID, OLED display, Deneyap controller, and micro-ROS based distributed control.**
 
 ---
+
 
 ## Robot Platform
 
@@ -46,6 +48,7 @@ The current version of the robot uses a **2-DOF leg mechanism**, while the next-
 
 ---
 
+
 # Project Goals
 
 - Hybrid quadruped robot
@@ -59,6 +62,7 @@ The current version of the robot uses a **2-DOF leg mechanism**, while the next-
 
 ---
 
+
 # Current Features
 
 - 2-DOF Quadruped Walking
@@ -71,6 +75,7 @@ The current version of the robot uses a **2-DOF leg mechanism**, while the next-
 - Live Robot Status Monitoring
 
 ---
+
 
 # Future Features
 
