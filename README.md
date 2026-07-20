@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Documents/Images/robot.jpeg" width="900">
+  <img src="Documents/Images/logo.png" width="450">
 </p>
 
 <h1 align="center">BÖRÜTAY</h1>
@@ -11,10 +11,27 @@ Hybrid Quadruped Robot Platform for Disaster Response and Autonomous Robotics
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-5-red)
-![ROS2](https://img.shields.io/badge/ROS2-Micro--ROS-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-5-C51A4A)
+![Micro-ROS](https://img.shields.io/badge/Micro--ROS-Planned-22314E)
+![MQTT](https://img.shields.io/badge/MQTT-Mosquitto-660066)
+![License](https://img.shields.io/badge/License-MIT-success)
 
+</p>
+
+---
+
+# Overview
+
+BÖRÜTAY is a modular hybrid quadruped robotic platform developed by the **BÖRÜTAY Team** at **OSTİM Technical University**. The project aims to provide a scalable robotic system for disaster response, autonomous robotics research and embedded systems development.
+
+The current platform features a **2-DOF quadruped architecture**, while the next-generation version is being expanded with **3-DOF legs, wheel modules, robotic arm integration, RFID, OLED display, Deneyap controller, and micro-ROS based distributed control.**
+
+---
+
+## Robot Platform
+
+<p align="center">
+  <img src="Documents/Images/robot.jpeg" width="850">
 </p>
 
 ---
