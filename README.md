@@ -607,7 +607,7 @@ See the **LICENSE** file for more information.
 
 ### *Inspired by our heritage. Engineered for the future.*
 
-**Quadruped Robotics • Embedded Systems • Autonomous Technologies**
+**Quadruped Robotics • Embedded Systems **
 
 </p>
 
