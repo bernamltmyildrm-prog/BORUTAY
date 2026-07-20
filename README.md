@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Documents/Images/logo.png" width="450">
+  <img src="Documents/Images/logo.png" alt="BORUTAY Logo" width="900">
 </p>
 
 <h1 align="center">BÖRÜTAY</h1>
