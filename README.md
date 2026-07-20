@@ -1,59 +1,73 @@
-# BORUTAY
+<p align="center">
+  <img src="Documents/Images/robot.jpeg" width="900">
+</p>
 
-**BORUTAY** is a modular quadruped robot platform developed by the Electrical and Electronics Engineering students of **OSTİM Technical University**.
+<h1 align="center">BÖRÜTAY</h1>
 
-The project is designed as a disaster support robotic platform capable of operating in hazardous environments through wireless remote control. BORUTAY combines inverse kinematics, embedded systems, computer vision, MQTT communication, and modular hardware architecture into a single robotic platform.
+<p align="center">
+Hybrid Quadruped Robot Platform for Disaster Response and Autonomous Robotics
+</p>
 
-The current version is a **2-DOF quadruped robot** powered by **Raspberry Pi 5**. Future versions will introduce **3-DOF legs, wheel-assisted locomotion, robotic arm integration, RFID identification, OLED interface, Deneyap Kart, and micro-ROS support.**
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-5-red)
+![ROS2](https://img.shields.io/badge/ROS2-Micro--ROS-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+</p>
 
 ---
 
-# Project Overview
+# Overview
 
-BORUTAY aims to provide a flexible robotic platform capable of operating in environments where human access is difficult or dangerous.
+**BÖRÜTAY** is a hybrid quadruped robot platform developed by undergraduate Electrical and Electronics Engineering students at **OSTİM Technical University**.
 
-The current prototype demonstrates:
+The project is designed as a modular robotic platform capable of operating in disaster environments. It combines legged locomotion, wheeled mobility, embedded control systems, computer vision, wireless communication and autonomous navigation within a single architecture.
 
-- Stable standing posture
-- Quadruped walking gait
-- Wireless MQTT communication
-- Desktop Ground Control Station
-- Live camera streaming
-- Inverse kinematics based leg control
-- Real-time servo control
+The current version of the robot uses a **2-DOF leg mechanism**, while the next-generation platform is being developed with **3-DOF legs**, wheel modules, robotic arm integration and Micro-ROS based distributed control.
 
-The project continues to evolve toward a more autonomous and intelligent robotic platform.
+---
+
+# Project Goals
+
+- Hybrid quadruped robot
+- Disaster response support platform
+- Stable walking algorithm
+- Real-time remote control
+- Embedded Linux control architecture
+- Computer vision
+- Modular electronic architecture
+- Future autonomous navigation support
 
 ---
 
 # Current Features
 
-- 2 DOF per leg (8 Servo Motors)
+- 2-DOF Quadruped Walking
 - Raspberry Pi 5 Main Controller
 - MQTT Communication
 - PyQt6 Ground Control Station
-- Live Camera Streaming
-- Inverse Kinematics
+- Real-Time Camera Streaming
+- Servo Based Inverse Kinematics
 - Trot Gait
-- Servo Calibration
-- Hardware & Simulation Modes
-- Modular Software Architecture
+- Live Robot Status Monitoring
 
 ---
 
-# Planned Features
+# Future Features
 
-- 3 DOF Leg Upgrade
-- Robot Arm Integration
-- Wheel-Leg Hybrid Locomotion
-- micro-ROS Architecture
-- Deneyap Kart Integration
+- 3-DOF Leg Structure
+- Wheel-Leg Hybrid Motion
+- Robotic Arm
 - RFID Module
-- OLED Display
-- IMU Integration
+- OLED Status Display
+- Deneyap Controller Integration
+- micro-ROS Communication
 - Autonomous Navigation
-- Obstacle Detection
-- Computer Vision Assisted Mobility
+- SLAM Support
+- Object Detection
+- Obstacle Avoidance
 
 ---
 
@@ -63,198 +77,217 @@ The project continues to evolve toward a more autonomous and intelligent robotic
 
 - Raspberry Pi 5
 
-## Communication
+## Low-Level Controller
 
-- MikroTik RouterBOARD Metal 52ac (x2)
+- Deneyap Kart
 
-## Servo Driver
+## Servo Motors
 
-- PCA9685
+- DS3218 Digital Servo Motors
 
-## Actuators
+## Motor Driver
 
-- DS3218 Servo Motors
+- PCA9685 Servo Driver
 
-## Power System
+## Wireless Communication
 
-- 3S Li-Ion Battery
-- XL4016 DC-DC Converter
+- Dual MikroTik RouterBOARD Metal 52ac
 
 ## Sensors
 
-Current
-
-- Raspberry Pi Camera Module
-
-Planned
-
+- Pi Camera Module
 - IMU
-- RFID PN532
+- RFID
 - OLED Display
+
+## Future Actuators
+
+- DC Gear Motors
+- Robotic Arm
 
 ---
 
 # Software
 
-Current Software
-
-- Python 3
+- Python
 - PyQt6
 - OpenCV
-- NumPy
-- MQTT (Mosquitto)
-- Paho MQTT
+- MQTT
+- Mosquitto
 - Raspberry Pi OS
-
-Future Software
-
-- micro-ROS
-- Deneyap SDK
-
----
-
-# Software Architecture
-
-```text
-              +------------------------+
-              |      Desktop GUI       |
-              |        (PyQt6)         |
-              +-----------+------------+
-                          |
-                        MQTT
-                          |
-              +-----------v------------+
-              |    robot_listener.py   |
-              +-----------+------------+
-                          |
-              +-----------v------------+
-              |    Quadruped Control   |
-              +-----------+------------+
-                          |
-          +---------------+----------------+
-          |               |                |
-      Inverse IK       Gait Planner    Hardware
-          |               |            Controller
-          +---------------+----------------+
-                          |
-                     PCA9685 Driver
-                          |
-                     Servo Motors
-```
+- Micro-ROS (planned)
+- Embedded Linux
 
 ---
 
 # Repository Structure
 
-```text
+```
 BORUTAY
 │
 ├── CAD
-│   └── SolidWorks
+│   ├── SolidWorks
+│   ├── STL
+│   └── Assembly
 │
 ├── Documents
 │   ├── Graduation_Project
-│   └── TEKNOFEST
+│   ├── TEKNOFEST
+│   └── Images
 │
 ├── quadruped_pi
-│   ├── main.py
-│   ├── robot_listener.py
-│   ├── camera_stream.py
-│   ├── hardware.py
-│   ├── quadruped.py
 │   ├── gait.py
 │   ├── leg.py
+│   ├── quadruped.py
+│   ├── hardware.py
+│   ├── robot_listener.py
+│   ├── camera_stream.py
 │   ├── config.py
-│   ├── pid.py
-│   └── ...
+│   └── main.py
 │
 ├── GUI
 │
-├── README.md
-│
-├── LICENSE
-│
-└── .gitignore
+└── README.md
 ```
 
 ---
 
-# Installation
+# Robot Architecture
 
-Clone the repository
-
-```bash
-git clone https://github.com/bernamltmyildrm-prog/BORUTAY.git
 ```
-
-Enter the project
-
-```bash
-cd BORUTAY
-```
-
-Install Python dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-# Running
-
-Start Robot Listener
-
-```bash
-python robot_listener.py
-```
-
-Start Camera Stream
-
-```bash
-python camera_stream.py
-```
-
-Launch Ground Control Station
-
-```bash
-python main.py
+                 GUI (PyQt6)
+                      │
+               MQTT Communication
+                      │
+             Raspberry Pi 5
+        ┌──────────┼──────────┐
+        │          │          │
+     Camera      PCA9685     micro-ROS
+        │          │          │
+     OpenCV      Servos   Deneyap Kart
+                              │
+                     DC Motors
+                     Robotic Arm
+                     RFID
+                     OLED
 ```
 
 ---
 
-# Future Roadmap
+# Computer Vision
 
-The BORUTAY platform is actively being expanded with several new capabilities.
+The robot streams live video from the Raspberry Pi camera to the Ground Control Station.
 
-Upcoming developments include:
+Current capabilities:
 
-- 3 DOF Quadruped Design
-- Robot Arm Mechanism
-- Wheel Assisted Walking
-- Deneyap Kart Integration
-- RFID Authentication
-- OLED Information Display
-- micro-ROS Communication
-- Autonomous Obstacle Avoidance
-- Vision-Based Navigation
-- SLAM Integration
-- AI Assisted Decision Making
+- Live Camera Feed
+- Low-Latency Streaming
+- Remote Monitoring
+
+Future capabilities:
+
+- YOLO Object Detection
+- Obstacle Detection
+- Human Detection
+- Autonomous Decision Making
+
+---
+
+# Motion Control
+
+Current locomotion:
+
+- Inverse Kinematics
+- Trot Gait
+- Servo Angle Calibration
+- Smooth Motion Profiles
+
+Future locomotion:
+
+- 3-DOF Leg Kinematics
+- Dynamic Walking
+- Terrain Adaptation
+- Wheel-Leg Hybrid Control
+
+---
+
+# Communication
+
+Current
+
+- MQTT
+- TCP/IP Camera Streaming
+
+Future
+
+- micro-ROS
+- ROS2 Topics
+- Distributed Embedded Nodes
+
+---
+
+# Images
+
+## Robot Platform
+
+<p align="center">
+<img src="Documents/Images/robot.jpeg" width="700">
+</p>
+
+---
+
+## Mission Control Center
+
+<p align="center">
+<img src="Documents/Images/gui.jpeg" width="850">
+</p>
+
+---
+
+## Project Team
+
+<p align="center">
+<img src="Documents/Images/team1.png" width="800">
+</p>
+
+<p align="center">
+<img src="Documents/Images/team2.png" width="800">
+</p>
+
+---
+
+# Development Roadmap
+
+- ✅ Mechanical Design
+- ✅ Electronic Design
+- ✅ 2-DOF Walking Robot
+- ✅ Raspberry Pi Integration
+- ✅ GUI Development
+- ✅ MQTT Communication
+- ✅ Camera Streaming
+- 🚧 3-DOF Upgrade
+- 🚧 Wheel Integration
+- 🚧 Robotic Arm
+- 🚧 RFID
+- 🚧 OLED Display
+- 🚧 Deneyap Integration
+- 🚧 micro-ROS
+- 🚧 Autonomous Navigation
 
 ---
 
 # Team
 
-## BORUTAY Team
+## BÖRÜTAY Team
 
-- **Berna Meltem Yıldırım**
-- **Ahmet Emirhan Göktürk**
-- **Uygar Baş**
-- **Sıla Özdemir**
+- Berna Meltem Yıldırım
+- Ahmet Emirhan Göktürk
+- Uygar Baş
+- Sıla Özdemir
 
 ---
 
-## Academic Advisor
+# Advisor
 
 **Dr. Şenol Gülgönül**
 
@@ -266,4 +299,4 @@ OSTİM Technical University
 
 # License
 
-This project is licensed under the MIT License.
+This project is released under the MIT License.
