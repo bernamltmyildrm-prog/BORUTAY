@@ -396,58 +396,6 @@ The graphical user interface was developed using **PyQt6** and communicates with
 
 ---
 
-# Robot Platform
-
-<p align="center">
-<img src="Documents/Images/robot.jpeg" width="850">
-</p>
-
-BÖRÜTAY has been designed with a modular body structure, enabling future upgrades without requiring major mechanical redesign.
-
-The platform currently supports:
-
-- 2-DOF Legs
-- Raspberry Pi 5
-- MQTT Communication
-- Live Camera Streaming
-- Modular Electronics
-
-The next hardware revision will introduce:
-
-- 3-DOF Legs
-- Wheel Modules
-- Robotic Arm
-- RFID
-- OLED Display
-- Deneyap Kart
-- micro-ROS
-
----
-
-# Development Progress
-
-| Module | Status |
-|---------|--------|
-| Mechanical Design | ✅ Completed |
-| Electronic Design | ✅ Completed |
-| Raspberry Pi Integration | ✅ Completed |
-| Servo Control | ✅ Completed |
-| Inverse Kinematics | ✅ Completed |
-| GUI Development | ✅ Completed |
-| MQTT Communication | ✅ Completed |
-| Camera Streaming | ✅ Completed |
-| Object Detection GUI | ✅ Completed |
-| 3-DOF Upgrade | 🚧 In Progress |
-| Wheel Integration | 🚧 Planned |
-| Robotic Arm | 🚧 Planned |
-| RFID | 🚧 Planned |
-| OLED Display | 🚧 Planned |
-| Deneyap Integration | 🚧 Planned |
-| micro-ROS | 🚧 Planned |
-| Autonomous Navigation | 🚧 Planned |
-
----
-
 # Project Gallery
 
 ## Team
