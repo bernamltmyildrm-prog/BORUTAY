@@ -593,6 +593,20 @@ Your support motivates our team and encourages future development.
 
 ---
 
+# Connect With Us
+
+Stay connected with the **BÖRÜTAY Team** and follow our journey in robotics, embedded systems, and autonomous technologies.
+
+<p align="center">
+
+<a href="https://www.linkedin.com/company/borutay">
+<img src="https://img.shields.io/badge/Follow%20BÖRÜTAY%20on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+</a>
+
+</p>
+
+---
+
 # License
 
 This project is licensed under the **MIT License**.
@@ -613,7 +627,8 @@ See the **LICENSE** file for more information.
 
 <p align="center">
 
-Made with ❤️ by the **BÖRÜTAY Team**
+Developed by the **BÖRÜTAY Team**
+
+OSTİM Technical University
 
 </p>
-
