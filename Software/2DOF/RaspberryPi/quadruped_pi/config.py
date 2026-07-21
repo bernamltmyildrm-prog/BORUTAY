@@ -1,22 +1,26 @@
 """
-config.py
-=========
+config.py - BUYUK KOPEK (1.8x olcek)
+=====================================
 Borutay quadruped robot - merkezi konfigurasyon.
 Tum sabitler burada, diger dosyalar bunu import eder.
+
+BASKI %180 (1.8x) BUYUTULDU: tum mm degerleri eski config x 1.8.
+Acilar ve IK matematigi AYNI (geometrik benzerlik - ucgen buyuyunce
+acilari degismez). Sadece uzunluk/yukseklik/adim degerleri olceklendi.
 """
 
 # =============================================================================
-# BACAK GEOMETRISI (mm)
+# BACAK GEOMETRISI (mm) - 1.8x olcek
 # =============================================================================
-# STL dosyalarindan olculen gercek uzunluklar
-FEMUR_LENGTH = 105.81       # ust bacak (hip pivotundan diz pivotuna)
-TIBIA_LENGTH = 88.63        # alt bacak (diz pivotundan ayak ucuna)
+# Eski STL olculeri x 1.8
+FEMUR_LENGTH = 190.46       # ust bacak (eski 105.81 x 1.8)
+TIBIA_LENGTH = 159.53       # alt bacak (eski  88.63 x 1.8)
 
-# Govde geometrisi (mm)
-BODY_LENGTH = 220.0         # on hip ile arka hip arasi
-BODY_WIDTH = 110.0          # sol hip ile sag hip arasi
-BODY_STAND_HEIGHT = 160.0   # ayak ucundan govde tabanina (stand pose)
-BODY_IDLE_HEIGHT = 130.0     # cromelmis poz (rest)
+# Govde geometrisi (mm) - 1.8x
+BODY_LENGTH = 396.0         # on hip ile arka hip arasi (eski 220 x 1.8)
+BODY_WIDTH = 198.0          # sol hip ile sag hip arasi (eski 110 x 1.8)
+BODY_STAND_HEIGHT = 288.0   # ayak ucundan govde tabanina (eski 160 x 1.8)
+BODY_IDLE_HEIGHT = 234.0    # cromelmis poz (eski 130 x 1.8)
 
 # =============================================================================
 # BACAK INDEKSLEME
@@ -68,11 +72,18 @@ SERVO_CHANNELS = {
 # =============================================================================
 # Mekanik nötr konumda servo'nun gerçek açi degeri (derece).
 # 180-derece servo icin orta = 90. Horn'u 90'da takmadiysan burada ayarla.
+#
+# YENI BUYUK KOPEK MONTAJI: horn'lar yeni takiliyor. Once servo_kalibre.py
+# ile 'all 90' yapip horn'lari stand pozisyonunda tak, sonra find_neutrals.py
+# ile ince ayar yapip cikan degerleri buraya yapistir.
+#
+# Baslangic olarak hepsi 90 (yeni montaj icin notr). Kalibrasyon sonrasi
+# guncellenecek.
 SERVO_CENTER = {
-    LEG_RF: {JOINT_HIP: 144.5, JOINT_KNEE: 159.4},  # RF -> stand servo: 95 / 90
-    LEG_RH: {JOINT_HIP: 144.5, JOINT_KNEE: 159.40},  # RH -> stand servo: 90 / 80
-    LEG_LH: {JOINT_HIP: 35.50,  JOINT_KNEE: 5.60},   # LH -> hip 90, knee eski 100
-    LEG_LF: {JOINT_HIP: 35.50,  JOINT_KNEE: 10.60},   # LF -> eski 90 / 90
+    LEG_RF: {JOINT_HIP: 90.0, JOINT_KNEE: 90.0},
+    LEG_RH: {JOINT_HIP: 90.0, JOINT_KNEE: 90.0},
+    LEG_LH: {JOINT_HIP: 90.0, JOINT_KNEE: 90.0},
+    LEG_LF: {JOINT_HIP: 90.0, JOINT_KNEE: 90.0},
 }
 
 # Servo donus yonu: +1 normal, -1 ters.
@@ -115,11 +126,12 @@ CONTROL_LOOP_HZ = 50
 CONTROL_LOOP_DT = 1.0 / CONTROL_LOOP_HZ  # = 0.02 s
 
 # =============================================================================
-# GAIT (YURUYUS) PARAMETRELERI
+# GAIT (YURUYUS) PARAMETRELERI - 1.8x olcek
 # =============================================================================
-GAIT_STEP_LENGTH_X = 60.0    # mm, bir adimda ayak ne kadar ileri-geri savrulur
-GAIT_STEP_HEIGHT_Z = 40.0    # mm, swing sirasinda ayak ne kadar yukseliyor
-GAIT_PERIOD_S = 0.75         # saniye, tam cycle suresi
+GAIT_STEP_LENGTH_X = 108.0   # mm, bir adimda ayak ne kadar ileri-geri (eski 60 x 1.8)
+GAIT_STEP_HEIGHT_Z = 72.0    # mm, swing sirasinda ayak ne kadar yukseliyor (eski 40 x 1.8)
+GAIT_PERIOD_S = 0.9          # saniye, tam cycle suresi (eski 0.75 -> buyuk kutle
+                             # icin biraz yavaslatildi; testte 0.8-1.1 dene)
 
 # =============================================================================
 # PID PARAMETRELERI (IMU gelince kullanilacak)
@@ -132,7 +144,7 @@ BALANCE_ROLL_KP = 0.8
 BALANCE_ROLL_KI = 0.0
 BALANCE_ROLL_KD = 0.05
 
-BALANCE_CORRECTION_LIMIT_MM = 10.0
+BALANCE_CORRECTION_LIMIT_MM = 18.0    # eski 10 x 1.8
 BALANCE_DEADBAND_DEG = 0.5
 COMPLEMENTARY_ALPHA = 0.98
 
